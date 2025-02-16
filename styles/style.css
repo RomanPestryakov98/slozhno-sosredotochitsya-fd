@@ -1,10 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
+/* ОБЩИЕ */
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   max-inline-size: 1024px;
   margin: 0 auto;
   font-family: 'IBM Plex mono';
+  font-size: 18px;
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
@@ -16,6 +20,8 @@
 .title-decor {
   background-color: var(--accent-color);
 }
+
+/* HEADER */
 
 .header {
   position: relative;
@@ -30,7 +36,6 @@
   right: 29px;
   top: 20px;
   font-weight: 400;
-  font-size: 18px;
   line-height: 139%;
   color: var(--accent-color);
   text-transform: uppercase;
@@ -81,7 +86,6 @@
 
 .header__description {
   font-weight: 700;
-  font-size: 18px;
   line-height: 130%;
   color: var(--description-text);
   max-inline-size: 50%;
@@ -107,7 +111,6 @@
 
 .header__theme-menu-button {
   font-weight: 400;
-  font-size: 18px;
   line-height: 100%;
   text-align: center;
   color: var(--button-color);
@@ -183,3 +186,84 @@
   }
 } 
 
+/* SECTION */
+
+main {
+  padding: 20px 0;
+}
+
+.section {
+  padding: 40px 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.section_type_column {
+  grid-template-columns: calc(315 / 984 * 100%) 1fr;
+}
+
+.section_type_row {
+  grid-template-columns: 1fr;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 130%;
+  color: var(--section-title-color);
+}
+
+.list {
+  display: grid;
+  gap: 20px;
+}
+
+.section_type_row .section__list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.list__title {
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--item-section-title-color);
+}
+
+.list__title_level_two {
+  font-weight: 400;
+}
+
+.list__item_margin_top {
+  margin-top: 20px;
+}
+
+.list__subtitle {
+  margin-block-start: 10px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--main-text-color);
+}
+
+.list__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media screen and (width < 1024px) {
+  .section_type_row .section__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (width < 768px) {
+  main {
+    padding: 15px 0;
+  }
+
+  .section {
+    padding: 25px 10px;
+  }
+
+  .section_type_column {
+    grid-template-columns: 1fr;
+  }
+}

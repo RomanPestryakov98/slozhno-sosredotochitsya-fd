@@ -23,7 +23,9 @@
   --background-image: url('../images/cover-image-dark.png');
   
   --description-text: var(--blue-color);
-  --main-text-color: var(#f1b2ce);
+  --main-text-color:#f1b2ce;
+  --section-title-color: var(--accent-color);
+  --item-section-title-color: var(--blue-color);
 }
 
 .theme-dark .page {
