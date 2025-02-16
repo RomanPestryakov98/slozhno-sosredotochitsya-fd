@@ -213,6 +213,7 @@ main {
 }
 
 @media screen and (width < 768px) {
+  
   main {
     padding: 15px 0;
   }
@@ -228,6 +229,7 @@ main {
   .section__title {
     max-inline-size: 100%;
   } 
+
 }
 
 /* GALLERY */

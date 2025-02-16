@@ -39,6 +39,7 @@
 }
 
 @media screen and (width < 768px) { 
+
     .decorated-element {
       inset-inline-end: 19px;
       inset-block-start: 10px;
@@ -53,4 +54,5 @@
       inset-block-end: 10px;
       inset-inline-start: 10px;
     }
-  } 
+
+} 
