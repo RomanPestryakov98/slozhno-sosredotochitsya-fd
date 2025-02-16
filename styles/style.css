@@ -1,8 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
-/* ОБЩИЕ */
-
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   max-inline-size: 1024px;
@@ -20,7 +17,6 @@
 /* HEADER */
 
 .header {
-  position: relative;
   min-block-size: 100vh;
   padding: 20px;
   display: grid;
@@ -29,8 +25,8 @@
 
 .rec {
   position: absolute;
-  right: 29px;
-  top: 20px;
+  inset-inline-end: 29px;
+  inset-block-start: 20px;
   font-weight: 400;
   line-height: 139%;
   color: var(--accent-color);
@@ -50,33 +46,7 @@
 
 }
 
-.decorated-zone::after, .decorated-zone::before {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-}
-
-.decorated-zone::after {
-  border-top: 1px solid var(--decorated-zone-color);
-  border-right: 1px solid var(--decorated-zone-color);
-  top: 20px;
-  right: 20px;
-}
-
-.decorated-zone::before {
-  border-bottom: 1px solid var(--decorated-zone-color);
-  border-left: 1px solid var(--decorated-zone-color);
-  left: 20px;
-  bottom: 20px;
-}
-
 .header__title {
-  font-weight: 700;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  line-height: 83%;
-  color: var(--focus-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
   margin-inline-start: -20px;
 }
 
@@ -89,10 +59,6 @@
   align-self: center;
 }
 
-.header__theme-menu {
-
-}
-
 .header__theme-menu-list {
   padding: 0;
   margin: 0;
@@ -100,9 +66,6 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-}
-
-.header__theme-menu-item {
 }
 
 .header__theme-menu-button {
@@ -113,7 +76,7 @@
   background-color: transparent;
   border: 1px solid transparent;  
   padding: 0px 25px;
-  min-height: 30px;
+  min-block-size: 30px;
   text-transform: lowercase;
   cursor: pointer;
   transition: all 0.3s;
@@ -130,7 +93,6 @@
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--accent-color);
 }
-
 
 .header__theme-menu-button_active {
   border: 1px solid var(--button-border-active);
@@ -167,18 +129,18 @@
   }
 
   .decorated-element {
-    right: 19px;
-    top: 10px;
+    inset-inline-end: 19px;
+    inset-block-start: 10px;
   }
 
   .decorated-zone::after {
-    top: 10px;
-    right: 10px;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
   }
 
   .decorated-zone::before {
-    bottom: 10px;
-    left: 10px;
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
   }
 } 
 
@@ -229,7 +191,7 @@ main {
 }
 
 .list__item_margin_top {
-  margin-top: 20px;
+  margin-block-start: 20px;
 }
 
 .list__subtitle {
@@ -286,14 +248,12 @@ main {
   grid-row: span 2;
 }
 
-.title-decor {
-  background-color: var(--accent-color);
-  color: var(--accent-text-color);
-}
+
 
 @media screen and (width < 768px) {
   .gallery {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .gallery__image_type_big-column {
@@ -303,4 +263,12 @@ main {
   .gallery__image_type_big-row {
     grid-row: span 1;
   }
+}
+
+.footer {
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
