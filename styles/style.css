@@ -75,8 +75,8 @@
   color: var(--button-color);
   background-color: transparent;
   border: 1px solid transparent;  
-  padding: 0px 25px;
-  min-block-size: 30px;
+  padding: 0px 12px;
+  min-block-size: 26px;
   text-transform: lowercase;
   cursor: pointer;
   transition: all 0.3s;
@@ -169,6 +169,7 @@ main {
   font-size: inherit;
   line-height: 130%;
   color: var(--section-title-color);
+  max-inline-size: 315px;
 }
 
 .list {
@@ -183,6 +184,7 @@ main {
 .list__title {
   font-weight: 700;
   line-height: 130%;
+  font-size: var(--font-size);
   color: var(--item-section-title-color);
 }
 
@@ -227,6 +229,10 @@ main {
 }
 
 /* GALLERY */
+
+.section__gallery .section__title {
+  max-inline-size: 100%;
+}
 
 .gallery {
   display: grid;
