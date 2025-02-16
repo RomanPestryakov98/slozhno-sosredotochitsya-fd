@@ -286,6 +286,7 @@ main {
 }
 
 .footer {
+  block-size: 100vh;
   min-block-size: 768px;
   display: flex;
   align-items: center;
