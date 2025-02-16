@@ -37,3 +37,20 @@
     color: var(--focus-color);
     text-shadow: 4px 4px 0 var(--accent-color);
 }
+
+@media screen and (width < 768px) { 
+    .decorated-element {
+      inset-inline-end: 19px;
+      inset-block-start: 10px;
+    }
+  
+    .decorated-zone::after {
+      inset-block-start: 10px;
+      inset-inline-end: 10px;
+    }
+  
+    .decorated-zone::before {
+      inset-block-end: 10px;
+      inset-inline-start: 10px;
+    }
+  } 
