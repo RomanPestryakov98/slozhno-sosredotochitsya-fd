@@ -2,21 +2,22 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
 :root {
   --blue-color: #000028;
-  --accent-color: rgb(255, 0, 112);
+  --accent-color: rgb(255 0 112);
   --accent-text-color: var(--blue-color);
 
   --button-color: var(--accent-color);
-  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --button-hover-color: rgb(255 0 112 / 0.4);
   --button-border-active: var(--accent-color);
 
   --decorated-zone-color: var(--accent-color);
-  
+
   --focus-color: #db00ff;
 
   --background-color: var(--blue-color);
-  --background-image: url('../images/cover-image-dark.png');
+  --background-image: url(../images/cover-image-dark.png);
 
   --description-text: var(--blue-color);
   --main-text-color: #f1b2ce;

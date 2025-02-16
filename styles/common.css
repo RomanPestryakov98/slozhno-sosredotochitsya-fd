@@ -1,58 +1,58 @@
 /* Общие стили */
 
 .title-decor {
-    background-color: var(--accent-color);
-    color: var(--accent-text-color);
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
 .decorated-zone {
-    position: relative;
+  position: relative;
 }
 
-.decorated-zone::after, .decorated-zone::before {
-    content: '';
-    position: absolute;
-    inline-size: 25px;
-    block-size: 25px;
+.decorated-zone::after,
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .decorated-zone::after {
-    border-block-start: 1px solid var(--decorated-zone-color);
-    border-inline-end: 1px solid var(--decorated-zone-color);
-    inset-block-start: 20px;
-    inset-inline-end: 20px;
+  border-block-start: 1px solid var(--decorated-zone-color);
+  border-inline-end: 1px solid var(--decorated-zone-color);
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
 }
 
 .decorated-zone::before {
-    border-block-end: 1px solid var(--decorated-zone-color);
-    border-inline-start: 1px solid var(--decorated-zone-color);
-    inset-inline-start: 20px;
-    inset-block-end: 20px;
+  border-block-end: 1px solid var(--decorated-zone-color);
+  border-inline-start: 1px solid var(--decorated-zone-color);
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
 }
 
 .title {
-    font-weight: 700;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    line-height: 83%;
-    color: var(--focus-color);
-    text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 83%;
+  color: var(--focus-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-@media screen and (width < 768px) { 
+@media screen and (width < 768px) {
 
-    .decorated-element {
-      inset-inline-end: 19px;
-      inset-block-start: 10px;
-    }
-  
-    .decorated-zone::after {
-      inset-block-start: 10px;
-      inset-inline-end: 10px;
-    }
-  
-    .decorated-zone::before {
-      inset-block-end: 10px;
-      inset-inline-start: 10px;
-    }
+  .decorated-element {
+    inset-inline-end: 19px;
+    inset-block-start: 10px;
+  }
 
-} 
+  .decorated-zone::after {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
+
+  .decorated-zone::before {
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
+  }
+}
