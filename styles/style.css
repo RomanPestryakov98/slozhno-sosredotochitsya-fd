@@ -227,6 +227,7 @@ main {
 
   .section__title {
     max-inline-size: 100%;
+  } 
 }
 
 /* GALLERY */
@@ -255,9 +256,8 @@ main {
   grid-row: span 2;
 }
 
-
-
 @media screen and (width < 768px) {
+
   .section__gallery {
     gap: 10px;
   }
